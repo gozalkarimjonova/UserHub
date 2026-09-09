@@ -32,8 +32,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-violet-50 text-violet-900 dark:bg-[#0c0618] dark:text-violet-100 transition-colors duration-300 relative overflow-hidden">
-        <div className="fixed inset-0 pointer-events-none">
+      <div className="min-h-screen flex flex-col bg-violet-50 text-violet-900 dark:bg-[#0c0618] dark:text-violet-100 transition-colors duration-300 relative">
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-300/20 dark:bg-violet-600/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
         </div>
