@@ -38,7 +38,7 @@ function UserSingle() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
         <button
           onClick={() => navigate(-1)}
           className={`inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium ${btnSecondary} cursor-pointer`}
@@ -46,7 +46,7 @@ function UserSingle() {
           <span>← Orqaga</span>
         </button>
 
-        <div className="flex items-center space-x-2 text-xs font-mono text-violet-500 dark:text-violet-400/60">
+        <div className="hidden sm:flex items-center space-x-2 text-xs font-mono text-violet-500 dark:text-violet-400/60">
           <Link to="/" className="hover:text-violet-700 dark:hover:text-violet-300 hover:underline">Bosh sahifa</Link>
           <span>/</span>
           <Link to="/users" className="hover:text-violet-700 dark:hover:text-violet-300 hover:underline">Foydalanuvchilar</Link>
@@ -159,13 +159,13 @@ function UserSingle() {
             </div>
           </div>
 
-          <div className="flex justify-between items-center pt-4">
-            <Link to="/users" className="inline-flex items-center px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium text-sm transition-colors shadow-lg shadow-violet-600/25">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4">
+            <Link to="/users" className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium text-sm transition-colors shadow-lg shadow-violet-600/25">
               ← Barcha foydalanuvchilarga qaytish
             </Link>
-            <div className="flex items-center space-x-3">
-              {Number(id) > 1 && <Link to={`/users/${Number(id) - 1}`} className={btnSecondary}>← Oldingi (#{Number(id) - 1})</Link>}
-              {Number(id) < 10 && <Link to={`/users/${Number(id) + 1}`} className={btnSecondary}>Keyingi (#{Number(id) + 1}) →</Link>}
+            <div className="flex items-center gap-3">
+              {Number(id) > 1 && <Link to={`/users/${Number(id) - 1}`} className={`${btnSecondary} flex-1 justify-center sm:flex-none`}>← Oldingi (#{Number(id) - 1})</Link>}
+              {Number(id) < 10 && <Link to={`/users/${Number(id) + 1}`} className={`${btnSecondary} flex-1 justify-center sm:flex-none`}>Keyingi (#{Number(id) + 1}) →</Link>}
             </div>
           </div>
         </div>
